@@ -32,6 +32,6 @@ print(hom(H, G))
 ## Installation
 
 ````
-git clone https://github.com/kevinwangwkw/test
+git clone https://github.com/kevinwangwkw/CountHom
 pip3 install ./homlib
 ````
