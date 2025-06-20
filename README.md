@@ -21,7 +21,7 @@ G.addEdge(0, 1)
 G.addEdge(1, 2)
 G.addEdge(2, 0)
 
-print(hom(H, G))
+print(countHom(H, G))
 ````
 
 ````
