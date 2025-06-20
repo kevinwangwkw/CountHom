@@ -12,16 +12,16 @@ Define Graph by the number of vertices and add edges using addEdge manually:
 ````
 from homlib import Graph, countHom
 
-H = Graph(3)
-H.addEdge(0, 1)
-H.addEdge(1, 2)
+T = Graph(3)
+T.addEdge(0, 1)
+T.addEdge(1, 2)
 
 G = Graph(3)
 G.addEdge(0, 1)
 G.addEdge(1, 2)
 G.addEdge(2, 0)
 
-print(countHom(H, G))
+print(countHom(T, G))
 ````
 
 ````
@@ -33,5 +33,14 @@ print(countHom(H, G))
 
 ````
 git clone https://github.com/kevinwangwkw/CountHom
+pip3 install ./CountHom
+````
+
+<br>Note: if there is a ````fatal error: 'omp.h' file not found```` error, try ````brew install llvm```` then copy and paste the following entire block of code into the terminal:
+````
+LDFLAGS="-L$(brew --prefix llvm)/lib" \
+CPPFLAGS="-I$(brew --prefix llvm)/include" \
+CC="$(brew --prefix llvm)/bin/clang" \
+CXX="$(brew --prefix llvm)/bin/clang++" \
 pip3 install ./CountHom
 ````
