@@ -12,22 +12,59 @@ Define Graph by the number of vertices and add edges using addEdge manually:
 ````
 from homlib import Graph, countHom
 
-T = Graph(3)
-T.addEdge(0, 1)
-T.addEdge(1, 2)
+H = Graph(3)
+H.addEdge(0, 1)
+H.addEdge(1, 2)
 
 G = Graph(3)
 G.addEdge(0, 1)
 G.addEdge(1, 2)
 G.addEdge(2, 0)
 
-print(countHom(T, G))
+print(countHom(H, G))
 ````
 
 ````
 12
 ````
-<br>Define Graph by the adjacency matrix:
+<br>Define Graph by the adjacency list:
+````
+from homlib import Graph, countHom
+
+H = Graph([
+    [7, 8, 9],
+    [5, 8, 9],
+    [5, 6, 9],
+    [5, 6, 7],
+    [6, 7, 8],
+    [1, 2, 3],
+    [2, 3, 4],
+    [0, 3, 4],
+    [0, 1, 4],
+    [0, 1, 2],
+])
+
+G = Graph([
+    [1, 2, 4, 8, 9, 10],
+    [0, 2, 5, 7, 9, 11],
+    [0, 1, 3, 7, 8, 11],
+    [2, 6, 7, 8, 10],
+    [0, 5, 6, 8, 11],
+    [1, 4, 6, 8, 10],
+    [3, 4, 5, 10],
+    [1, 2, 3, 8, 10, 11],
+    [0, 2, 3, 4, 5, 7, 9, 10],
+    [0, 1, 8, 10, 11],
+    [0, 3, 5, 6, 7, 8, 9],
+    [1, 2, 4, 7, 9]
+])
+
+print(countHom(H, G))
+````
+
+````
+5654308
+````
 
 ## Installation
 
