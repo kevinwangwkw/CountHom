@@ -8,7 +8,7 @@ This C++ library computes the number of graph homomorphisms between two graphs H
 
 ## Usage
 
-Define Graph by the number of vertices and add edges using addEdge manually:
+Define Graph by the number of vertices and add edges using addEdge:
 ````
 from homlib import Graph, countHom
 
